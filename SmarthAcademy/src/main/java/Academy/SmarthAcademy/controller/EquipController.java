@@ -21,9 +21,9 @@ public class EquipController {
 	@Autowired
 	ServiceSQL service;
 	
-	@GetMapping("/getEquip/{id}") // 
+	@GetMapping("/supino/{id}") // 
 	public String getUser(@PathVariable int id) {
-		String teste = service.getEquip(id);		
+		String teste = service.getEquip(id);	 		
 		return teste;
 
 	}

@@ -8,7 +8,7 @@ import Academy.SmarthAcademy.entities.Equipamento;
 public interface SelectRepo extends JpaRepository<Equipamento,String>{
 	
 	@Query(nativeQuery = true, value = """
-			select count(*) from icaro.supino01 where status > 0 limit 10
+			select sum(status) from (select status from icaro.supino01 order by horario desc limit 10) as t
 				""")
 	public String trazerqt(int i);
 
