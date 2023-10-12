@@ -21,13 +21,12 @@ public class EquipController {
 	@Autowired
 	ServiceSQL service;
 	
-	@GetMapping("/supino/{id}") // 
-	public String getUser(@PathVariable int id) {
-		String teste = service.getEquip(id);	 		
+	@GetMapping("/{id}") // 
+	public String getEquip(@PathVariable int id) {
+		String teste = service.getFluxoEquip(id);	 		
 		return teste;
 
 	}
-	
 
 }
 

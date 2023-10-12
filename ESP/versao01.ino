@@ -93,10 +93,10 @@ void sensor() {
   digitalWrite(trigPin, HIGH); 
   delayMicroseconds(10);
   digitalWrite(trigPin, LOW);
+
   duration = pulseIn(echoPin, HIGH);
   distance= duration*0.034/2;
   //Serial.println(distance);
-  //inserir(distance);
   if(distance < 100){runInsertPositivePresence();}
   else{runInsertNegativePresence();}
   delay(100);
@@ -107,7 +107,6 @@ void loop(){
   
   if (conn.connectNonBlocking(server, server_port, user, password) != RESULT_FAIL){
     delay(500);
-    //runInsert();
     sensor();
     conn.close(); 
   } 
@@ -120,3 +119,6 @@ void loop(){
  
   delay(10000);
 }
+
+
+

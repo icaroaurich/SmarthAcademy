@@ -13,7 +13,7 @@ public class ServiceSQL implements iServiceSQL{
 	private SelectRepo repoSelect;
 
 	@Override
-	public String getEquip(int i) {
+	public String getFluxoEquip(int i) {
 		String teste = repoSelect.trazerqt(i);
 		return teste;
 	}
