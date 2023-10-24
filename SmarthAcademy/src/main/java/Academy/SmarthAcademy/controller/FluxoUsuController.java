@@ -15,16 +15,16 @@ import Academy.SmarthAcademy.service.ServiceSQL;
 
 @CrossOrigin
 @RestController
-@RequestMapping(value = "/equip")
-public class EquipController {
+@RequestMapping(value = "/fluxo")
+public class FluxoUsuController {
 	
 	@Autowired
 	ServiceSQL service;
 	
-	@GetMapping("/{id}") // 
-	public String getEquip(@PathVariable int id) {
-		String fluxoEquip = service.getFluxoEquip(id);	 		
-		return fluxoEquip;
+	@GetMapping("/") // 
+	public String getFluxoUsu() {
+		String fluxoUsu = service.getFluxoUsu(1);	 		
+		return fluxoUsu;
 	}
 
 }
