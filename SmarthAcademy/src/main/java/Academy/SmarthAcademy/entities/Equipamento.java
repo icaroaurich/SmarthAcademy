@@ -14,18 +14,40 @@ import jakarta.persistence.Id;
 public class Equipamento {
 	
 	@Id
-	private int index;
+	private Long id;
 	private String horario;
 	private int status;
-	
-	public int getIndex() {return index;}
-	//public void setIndex(String index) {this.index = index;}
-	
-	public String getHorario() {return horario;}
-	//public void setNome(String nome) {this.nome = nome;}
-	
-	public int getStatus() {return status;}
-	//public void setNome(String nome) {this.nome = nome;}
-	
-	
+
+	public Equipamento() {}
+
+	public Equipamento(Long id, String horario, int status) {
+		super();
+		this.id = id;
+		this.horario = horario;
+		this.status = status;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getHorario() {
+		return horario;
+	}
+
+	public void setHorario(String horario) {
+		this.horario = horario;
+	}
+
+	public int getStatus() {
+		return status;
+	}
+
+	public void setStatus(int status) {
+		this.status = status;
+	}
 }

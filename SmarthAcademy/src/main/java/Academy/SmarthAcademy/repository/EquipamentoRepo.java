@@ -5,12 +5,12 @@ import org.springframework.data.jpa.repository.Query;
 
 import Academy.SmarthAcademy.entities.Equipamento;
 
-public interface SelectFluxo extends JpaRepository<Equipamento,String>{
+public interface EquipamentoRepo extends JpaRepository<Equipamento,String>{
 	
 	@Query(nativeQuery = true, value = """
-			select contagem from academy.usuario_fluxo
+			select sum(presenca) from (select presenca from academy.equipamento_fluxo WHERE equipamentoid = :i order by horario desc limit 10) as t
 				""")
-	public String trazerFluxoUsu(int i);
+	String trazerqt(int i);
 
 }
 
