@@ -1,7 +1,10 @@
 import cv2
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> c002463043a5b7be427a235eeb421f4fe0464ee8
 def gravaVideo():
     Capture = cv2.VideoCapture(0)
     fourcc = cv2.VideoWriter_fourcc(*'XVID')
@@ -50,7 +53,11 @@ def Identifica():
             cv2.imshow('ao vivo', frame_vivo)
             b1, g1, r1 = frame_vivo[100, 100]
             if b1 == b:
+<<<<<<< HEAD
                 print('não tem gene')
+=======
+                print('não tem gente')
+>>>>>>> c002463043a5b7be427a235eeb421f4fe0464ee8
             else:
                 print('tem gente')
                 
