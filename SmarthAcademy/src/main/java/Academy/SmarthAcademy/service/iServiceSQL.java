@@ -1,5 +1,5 @@
 package Academy.SmarthAcademy.service;
-
+//Aurich
 import Academy.SmarthAcademy.entities.Equipamento;
 
 public interface iServiceSQL {

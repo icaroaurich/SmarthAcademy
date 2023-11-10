@@ -19,7 +19,7 @@ import Academy.SmarthAcademy.service.ServiceSQL;
 public class FluxoUsuController {
 	
 	@Autowired
-	ServiceSQL service;
+	ServiceSQL service; // service
 	
 	@GetMapping("/") // 
 	public String getFluxoUsu() {

@@ -19,7 +19,7 @@ import Academy.SmarthAcademy.service.ServiceSQL;
 public class EquipController {
 	
 	@Autowired
-	ServiceSQL service;
+	ServiceSQL service; // service
 	
 	@GetMapping("/{id}") // 
 	public String getEquip(@PathVariable int id) {

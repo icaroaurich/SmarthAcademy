@@ -8,7 +8,7 @@ public class SmarthAcademyApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SmarthAcademyApplication.class, args);
-		System.out.println("Aplicação iniciada");
+		System.out.println("Aplicação iniciada!");
 	}
 
 }
